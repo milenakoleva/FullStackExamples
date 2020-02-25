@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Задача: хистограма</title>
+</head>
+<body>
+
+<div>
+
+    <h3> Задача: хистограма</h3>
+  <pre>  Дадени са n цели числа в интервала [1 … 1000].
+      От тях някакъв процент p1 са под 200,
+      процент p2 са от 200 до 399, процент p3 са от 400 до 599,
+      процент p4 са от 600 до 799 и
+      останалите p5 процента са от 800 нагоре.
+      Да се напише програма, която изчислява и отпечатва процентите p1, p2, p3, p4 и p5.
+  </pre>
+</div>
+
+<div>
+    <form id="form">
+        <label for="number">Моля въведете броя числа</label>
+        <input type="number" id="number" min="1" max="1000"/>
+        <br/>
+        <input type="button" onclick="generateInputs()" value=" Покажи полетата"/>
+        <input type="button" onclick="clearInputs()" value=" Изчисти полетата"/>
+
+        <br/>
+        <br/>
+        <br/>
+
+        <div id="fieldsContainer"></div>
+
+        <input type="button"
+               id="calculate_button"
+               style="display:none;"
+               value="Изчисли хистограма"
+               onclick="calculateHistogram()"/>
+    </form>
+</div>
+
+<div id="result">
+
+    <p id="resultParagraph"></p>
+
+</div>
+
+<script src="histogram.js"></script>
+</body>
+</html>
