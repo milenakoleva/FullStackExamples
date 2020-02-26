@@ -15,7 +15,7 @@ public class Controllers {
     @ResponseBody
     public String zad1(@RequestParam Map<String, String> request) {
 
-        System.out.print("DEBUG: zad1: " + request);
+        System.out.println("DEBUG: zad1: " + request);
 
 
         int counterP1 = 0;
@@ -43,7 +43,7 @@ public class Controllers {
                 + "\nЧислата между 200 и 400 са: " + counterP2
                 + "\nЧислата между 400 и 600 са: " + counterP3
                 + "\nЧислата между 600 и 800 са: " + counterP4
-                + "\nЧислата между 800 и 1000 са: " + counterP1;
+                + "\nЧислата между 800 и 1000 са: " + counterP5;
 
         System.out.print(result);
 
@@ -55,7 +55,7 @@ public class Controllers {
     @ResponseBody
     public String zadLili(@RequestParam Map<String, String> request) {
 
-        System.out.print("DEBUG: zadlili: " + request);
+        System.out.println("DEBUG: zadlili: " + request);
 
         int age = Integer.parseInt(request.get("age"));
         int washingMachinePrice = Integer.parseInt(request.get("wmp"));
@@ -85,7 +85,7 @@ public class Controllers {
     @ResponseBody
     public String zadReturnToPast(@RequestParam Map<String, String> request) {
 
-        System.out.print("DEBUG: zadReturnToPast: " + request);
+        System.out.println("DEBUG: zadReturnToPast: " + request);
 
         int money = Integer.parseInt(request.get("money"));
         int year = Integer.parseInt(request.get("year"));
@@ -115,20 +115,20 @@ public class Controllers {
     @ResponseBody
     public String zadbreaking(@RequestParam Map<String, String> request) {
 
-        System.out.print("DEBUG: zadbreaking: " + request);
+        System.out.println("DEBUG: zadbreaking: " + request);
 
-        int M = Integer.parseInt(request.get("M"));
-        int N = Integer.parseInt(request.get("N"));
-        int S = Integer.parseInt(request.get("S"));
+        int m = Integer.parseInt(request.get("M"));
+        int n = Integer.parseInt(request.get("N"));
+        int s = Integer.parseInt(request.get("S"));
 
         int sum = 0;
 
         StringBuilder Sb= new StringBuilder();
 
 
-        for (int i = M; i >= N; i--) {
+        for (int i = m; i >= n; i--) {
             if (i % 6 == 0) {
-                if (S == i) {
+                if (s == i) {
                         break;
                 }
                 Sb.append(i);
@@ -148,7 +148,7 @@ public class Controllers {
     @ResponseBody
     public String zadLogistic(@RequestParam Map<String, String> request) {
 
-        System.out.print("DEBUG: zadLogistic: " + request);
+        System.out.println("DEBUG: zadLogistic: " + request);
 
 
         int countMiktobus = 0;
@@ -175,7 +175,7 @@ public class Controllers {
                 + "\nПроцент с камион" + (countKamion * 100f / totalWeight)
                 + "\nпроцент  с влак" + (countVlak * 100f / totalWeight);
 
-        System.out.print(result);
+        System.out.println(result);
 
         return result;
     }
