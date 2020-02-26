@@ -111,5 +111,73 @@ public class Controllers {
         return result;
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/api/zadbreaking")
+    @ResponseBody
+    public String zadbreaking(@RequestParam Map<String, String> request) {
+
+        System.out.print("DEBUG: zadbreaking: " + request);
+
+        int M = Integer.parseInt(request.get("M"));
+        int N = Integer.parseInt(request.get("N"));
+        int S = Integer.parseInt(request.get("S"));
+
+        int sum = 0;
+
+        StringBuilder Sb= new StringBuilder();
+
+
+        for (int i = M; i >= N; i--) {
+            if (i % 6 == 0) {
+                if (S == i) {
+                        break;
+                }
+                Sb.append(i);
+                Sb.append(" ");
+            }
+
+        }
+
+        String result = Sb.toString();
+
+        System.out.println(result);
+
+        return result;
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/api/zadLogistic")
+    @ResponseBody
+    public String zadLogistic(@RequestParam Map<String, String> request) {
+
+        System.out.print("DEBUG: zadLogistic: " + request);
+
+
+        int countMiktobus = 0;
+        int countKamion = 0;
+        int countVlak = 0;
+
+        int totalWeight = 0;
+
+        for (String t:request.values()) {
+           int tovar= Integer.parseInt(t);
+            if (tovar < 3) {
+                countMiktobus += tovar;
+            } else if (tovar < 11) {
+                countKamion += tovar;
+            } else {
+                countVlak += tovar;
+            }
+
+            totalWeight += tovar;
+
+        }
+
+        String result = "Процент с микробус" + (countMiktobus * 100f / totalWeight)
+                + "\nПроцент с камион" + (countKamion * 100f / totalWeight)
+                + "\nпроцент  с влак" + (countVlak * 100f / totalWeight);
+
+        System.out.print(result);
+
+        return result;
+    }
 
 }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Задача: логистика</title>
+</head>
+<body>
+
+<div>
+
+    <h3> Задача: логистика</h3>
+  <pre>  Отговаряте за логистиката на различни товари.
+      В зависимост от теглото на всеки товар е нужно различно превозно
+      средство и струва различна цена на тон:
+
+    До 3 тона – микробус (200 лева на тон).
+    От над 3 и до 11 тона – камион (175 лева на тон).
+    Над 11 тона – влак (120 лева на тон).
+    Вашата задача е да изчислите средната цена на тон превозен товар,
+      както и колко процента от товара се превозват с всяко превозно средство.
+  </pre>
+</div>
+
+<div>
+    <form id="form">
+        <label for="number">Моля въведете броя товарите</label>
+        <input type="number" id="number" min="1" max="1000"/>
+        <br/>
+        <input type="button" onclick="generateInputs()" value=" Покажи полетата"/>
+        <input type="button" onclick="clearInputs()" value=" Изчисти полетата"/>
+
+        <br/>
+        <br/>
+        <br/>
+
+        <div id="fieldsContainer"></div>
+
+        <input type="button"
+               id="calculate_button"
+               style="display:none;"
+               value="Извърши изчисленията за логистика"
+               onclick="calculateLogistic()"/>
+    </form>
+</div>
+
+<div id="result">
+
+    <p id="resultParagraph"></p>
+
+</div>
+
+<script src="Logistic.js"></script>
+</body>
+</html>

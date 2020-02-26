@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Задача: спиращо число</title>
+</head>
+<body>
+
+<div>
+
+    <h3> Задача: спиращо число</h3>
+  <pre>  Напишете програма, която принтира на конзолата всички числа от N до M,
+      които се делят на 2 и на 3 без остатък, в обратен ред. От конзолата ще се чете
+      още едно "спиращо" число S. Ако някое от делящите се на 2 и 3 числа е равно на
+      спиращото число, то не трябва да се принтира и програмата трябва да приключи.
+      В противен случай се принтират всички числа до N, които отговарят на условието.
+  </pre>
+</div>
+
+<div>
+    <form id="form">
+
+        <label for="N">N:</label>
+        <input type="number" id="N" min="0" max="1000"/>
+        <br/>
+        <label for="M">M:</label>
+        <input type="number" id="M" min="0" max="1000"/>
+        <br/>
+        <label for="S">S:</label>
+        <input type="number" id="S" min="0" max="1000"/>
+
+        <input type="button" value="Изчисли" onclick="calculate()"/>
+    </form>
+</div>
+
+<div id="result">
+    <p id="resultParagraph"></p>
+</div>
+
+<script src="Breakingnumber.js"></script>
+</body>
+</html>
