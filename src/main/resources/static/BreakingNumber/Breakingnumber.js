@@ -1,7 +1,7 @@
 
 function calculate() {
 
-    var url = '/api/zadbreaking?';
+    var url = '/api/breaking?';
 
     var Minput = document.getElementById('M').value;
     var Ninput = document.getElementById('N').value;

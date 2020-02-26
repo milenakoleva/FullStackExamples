@@ -39,7 +39,7 @@ function clearInputs() {
 
 function calculateHistogram() {
 
-    var url = '/api/zad1?';
+    var url = '/api/histogram?';
 
     var inputs = document.getElementsByName('inp');
 

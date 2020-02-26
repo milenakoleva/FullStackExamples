@@ -11,12 +11,11 @@ import java.util.Map;
 @Controller
 public class Controllers {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/api/zad1")
+    @RequestMapping(method = RequestMethod.GET, value = "/api/histogram")
     @ResponseBody
-    public String zad1(@RequestParam Map<String, String> request) {
+    public String histogram(@RequestParam Map<String, String> request) {
 
-        System.out.println("DEBUG: zad1: " + request);
-
+        System.out.println("DEBUG: Histogram: " + request);
 
         int counterP1 = 0;
         int counterP2 = 0;
@@ -51,11 +50,11 @@ public class Controllers {
     }
 
 
-    @RequestMapping(method = RequestMethod.GET, value = "/api/zadlili")
+    @RequestMapping(method = RequestMethod.GET, value = "/api/lili")
     @ResponseBody
-    public String zadLili(@RequestParam Map<String, String> request) {
+    public String liliBirthday(@RequestParam Map<String, String> request) {
 
-        System.out.println("DEBUG: zadlili: " + request);
+        System.out.println("DEBUG: liliBirthday: " + request);
 
         int age = Integer.parseInt(request.get("age"));
         int washingMachinePrice = Integer.parseInt(request.get("wmp"));
@@ -83,9 +82,9 @@ public class Controllers {
 
     @RequestMapping(method = RequestMethod.GET, value = "/api/returntopast")
     @ResponseBody
-    public String zadReturnToPast(@RequestParam Map<String, String> request) {
+    public String returnToPast(@RequestParam Map<String, String> request) {
 
-        System.out.println("DEBUG: zadReturnToPast: " + request);
+        System.out.println("DEBUG: returnToPast: " + request);
 
         int money = Integer.parseInt(request.get("money"));
         int year = Integer.parseInt(request.get("year"));
@@ -111,11 +110,11 @@ public class Controllers {
         return result;
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/api/zadbreaking")
+    @RequestMapping(method = RequestMethod.GET, value = "/api/breaking")
     @ResponseBody
-    public String zadbreaking(@RequestParam Map<String, String> request) {
+    public String breaking(@RequestParam Map<String, String> request) {
 
-        System.out.println("DEBUG: zadbreaking: " + request);
+        System.out.println("DEBUG: breaking: " + request);
 
         int m = Integer.parseInt(request.get("M"));
         int n = Integer.parseInt(request.get("N"));
@@ -144,11 +143,11 @@ public class Controllers {
         return result;
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/api/zadLogistic")
+    @RequestMapping(method = RequestMethod.GET, value = "/api/logistic")
     @ResponseBody
-    public String zadLogistic(@RequestParam Map<String, String> request) {
+    public String logistic(@RequestParam Map<String, String> request) {
 
-        System.out.println("DEBUG: zadLogistic: " + request);
+        System.out.println("DEBUG: logistic: " + request);
 
 
         int countMiktobus = 0;

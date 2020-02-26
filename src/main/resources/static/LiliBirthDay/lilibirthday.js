@@ -1,7 +1,7 @@
 
 function calculate() {
 
-    var url = '/api/zadlili?';
+    var url = '/api/lili?';
 
     var age = document.getElementById('age').value;
     var washingMachinePrice = document.getElementById('waching_machine_price').value;

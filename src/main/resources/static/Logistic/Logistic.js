@@ -39,7 +39,7 @@ function clearInputs() {
 
 function calculateLogistic() {
 
-    var url = '/api/zadLogistic?';
+    var url = '/api/logistic?';
 
     var inputs = document.getElementsByName('inp');
 
